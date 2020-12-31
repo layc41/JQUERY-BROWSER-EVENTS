@@ -51,12 +51,17 @@ $(document).ready(function () {
         $('#louisvilleWeather').toggle();
     })
 
-    $('td').hover( function () {
+    $("tr").not(':first').hover(
+        
         // in callback
-        $(this).parent.css("backgound-color", "WhiteSmoke");
+        function () {
+        $(this).css("background-color", "WhiteSmoke");
+        },
 
         // out callback
-        $(this).parent.css("backgound-color", "White");
-    })
+        function () {
+        $(this).css("background-color", "");
+        }
+    )
 
 });
